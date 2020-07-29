@@ -26,8 +26,8 @@ public interface ApiRequest {
                                   @Field("price") String price);
 
     @FormUrlEncoded
-    @PUT("item")
-    Call<StatusResponse> putItem(@Field("id") String id,
+    @PUT("item/{id}")
+    Call<StatusResponse> putItem(@Path("id") String id,
                                  @Field("name") String name,
                                  @Field("price") String price);
 
